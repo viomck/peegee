@@ -14,11 +14,10 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+from peegee import Pool
+from pool.context import WrappedPoolAcquireContext
 from typing import Any
 import asyncpg
-from pool.context import WrappedPoolAcquireContext
-
-Pool = asyncpg.Pool[asyncpg.Record]
 
 class WrappedPool:
     pool: Pool

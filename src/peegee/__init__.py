@@ -14,15 +14,12 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from apgtypes import Connection
-from pool import create_pool, Pool, WrappedPool
+from pool import create_pool, WrappedPool
 from pool.context import PoolAcquireContext, WrappedPoolAcquireContext
 
 __all__ = [
-    "Connection",
-    "create_pool",
-    "Pool",
     "WrappedPool",
     "PoolAcquireContext",
-    "WrappedPoolAcquireContext"
+    "WrappedPoolAcquireContext",
+    "create_pool",
 ]

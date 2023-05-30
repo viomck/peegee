@@ -14,8 +14,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+from peegee import Connection
 from typing import Any
-import apgtypes
 import asyncpg.pool
 
 PoolAcquireContext = asyncpg.pool.PoolAcquireContext[asyncpg.Record]
@@ -26,7 +26,7 @@ class WrappedPoolAcquireContext:
 	def __init__(self, ctx: PoolAcquireContext):
 		self.ctx = ctx
 
-	async def __aenter__(self) -> apgtypes.Connection:
+	async def __aenter__(self) -> Connection:
 		return await self.ctx.__aenter__()  # type: ignore
 	
 	async def __aexit__(self, *exc: Any):
