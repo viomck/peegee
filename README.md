@@ -8,9 +8,9 @@ pip3 install asyncpeegee
 
 ## usage
 ```python
-from peegee import create_pool, Pool
+from peegee import create_pool, WrappedPool
 
-pool: Pool
+pool: WrappedPool
 
 pool = await peegee.create_pool("postgres://...")
 
