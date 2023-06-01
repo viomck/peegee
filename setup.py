@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="asyncpeegee",
-    version="0.1.1",
+    version="0.1.2",
     license="GPL 3",
     author="Violet McKinney",
     author_email="opensource@viomck.com",
